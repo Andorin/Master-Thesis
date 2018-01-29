@@ -1,0 +1,111 @@
+.gpls_woo_rfq_plus_customer_bid{
+    font-weight: 700;
+}
+.make_an_offer_div{
+    margin-top:10px;margin-bottom: 10px;display: block
+}
+.customer_bid_rfq_page {
+
+
+}
+
+.make_an_offer_div_rfq_page {
+    float:right
+}
+.gpls_woo_rfq_cart_actions{
+    float:right
+}
+.gpls_woo_rfq_cart_actions_customer_bid{
+    float:right;
+    min-width: 50%;
+}
+.gpls_woo_rfq_cart_actions_rfq_file_upload{
+    float:left;
+    min-width: 50%;
+}
+.gpls_woo_rfq_cart_actions_ninja{
+    float:right;
+    min-width: 50%;
+}
+
+.ninja_custom_form{
+    width:auto
+
+}
+
+.hp-wrap {
+    display: none;
+}
+
+
+#gpls_woo_rfq_Plus_upload_file_form #gpls_woo_rfq_Plus_file_caption{
+    width:500px;
+}
+#woo_rfq_user_files{
+    font-size:12px;
+}
+#woo_rfq_user_files th{
+    text-align:left;
+}
+#woo_rfq_user_files td{
+    vertical-align:middle;
+}
+#woo_rfq_user_files td input{
+    margin:0px;
+}
+
+
+#captchasubmit {
+    display: none;
+}
+
+.woocommerce-OrderUpdates{
+    display:none;
+}
+
+
+ul.order_notes {
+    padding: 2px 0 0;
+    width: 70%;
+}
+
+ul.order_notes li {
+    padding: 0 10px;
+}
+
+ul.order_notes li.system-note .note_content {
+    background: #d7cad2;
+}
+
+ul.order_notes li .note_content {
+    padding: 10px;
+    background: #efefef;
+    position: relative;
+}
+
+
+ul.order_notes li p.meta {padding: 10px;color: #999;margin: 0;font-size: 11px;}
+
+
+
+ul.order_notes li.system-note .note_content {
+    background: #d7cad2;
+}
+
+ul.order_notes li .note_content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 0 0;
+    border-style: solid;
+    border-color: #efefef transparent;
+}
+
+
+
+
+
