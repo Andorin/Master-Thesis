@@ -1,77 +1,88 @@
-/**
- * Simple Write. 
- * 
- * Check if the mouse is over a rectangle and writes the status to the serial port. 
- * This example works with the Wiring / Arduino program that follows below.
- */
-
-
 import processing.serial.*;
 
-Serial myPort;  // Create object from Serial class
-int val;        // Data received from the serial port
-boolean mouseIsPressed = false;
 
-void setup() 
-{
-  size(200, 200);
-  // I know that the first port in the serial list on my mac
-  // is always my  FTDI adaptor, so I open Serial.list()[0].
-  // On Windows machines, this generally opens COM1.
-  // Open whatever port is the one you're using.
-  String portName = "/dev/cu.usbmodem14521";
-  print(portName);
-  myPort = new Serial(this, portName, 9600);
+Serial myPort;
+int portNumber;
+
+char[] charData = new char[15];
+int charIndex = 0;
+int i=0;
+PrintWriter output;
+
+void setup() {
+ output = createWriter("testdata.txt");
+ for (int i=0; i< Serial.list().length; i++) {
+     if(Serial.list()[i].equals("/dev/tty.usbmodem146211")) {
+       portNumber = i;
+     }
+ }
+ println(Serial.list());
+ 
+ String portName = Serial.list()[portNumber];
+ myPort = new Serial(this, portName, 9600);
+ print("Connected to ");
+ println(portName);
 }
 
 void draw() {
-  background(255);
-  if (mouseOverRect() && mouseIsPressed == true) {  // If mouse is over square,
-    fill(204);                    // change color and
-    myPort.write('H');              // send an H to indicate mouse is over square
-    println('H');
-  } 
-  else {                        // If mouse is not over square,
-    fill(0);                      // change color and
-    myPort.write('L');              // send an L otherwise
-    println('L');
+   while (myPort.available() > 0) {
+     char readChar = myPort.readChar();
+     //print(readChar);
+     charData[i] = readChar;
+     i++;
+     if (readChar == 'x') {
+       println(charIndex);
+       i = 0;
+       println(charData);
+       handleInput();
+       delay(50);
+       myPort.clear();
+     }
+   }
+}
+
+void handleInput(){
+  int counter = 0;
+  for (int j = 0; j < charData.length; j++){
+    if (charData[j] != ' '){
+      counter++;
+    }
   }
-  rect(50, 50, 100, 100);         // Draw a square
+  char[] tempData = new char[counter];
+  for(int p = 0; p < counter; p++){
+    tempData[p] = charData[p];
+  }
+  charData = clearBuffer(charData);
+  switch (tempData[0]){
+    case 'D':
+      println("D");
+      output.print(tempData[1] + ",");
+      int n = 2;
+      while(tempData[n] != 'x'){
+        output.print(tempData[n]);
+        n++;
+      }
+      output.flush();
+      break;
+    case 'S':
+      println("S");
+      break;
+    case 'I':
+      println("I");
+      break;
+    case 'F':
+      println("F - Finished Session");
+      output.flush();
+      output.close();
+      break;
+    default: println("Error with Buffer handling");
+  }
+  
 }
 
-boolean mouseOverRect() { // Test if mouse is over square
-  return ((mouseX >= 50) && (mouseX <= 150) && (mouseY >= 50) && (mouseY <= 150));
+char[] clearBuffer(char[] buffer){
+  for(int i = 0; i < buffer.length; i++){
+    buffer[i] = ' ';
+  }
+  return buffer;
 }
-
-void mousePressed(){
-  mouseIsPressed = true;
-}
-
-void mouseReleased(){
-  mouseIsPressed = false;
-}
-/*
-  // Wiring/Arduino code:
- // Read data from the serial and turn ON or OFF a light depending on the value
- 
- char val; // Data received from the serial port
- int ledPin = 4; // Set the pin to digital I/O 4
- 
- void setup() {
- pinMode(ledPin, OUTPUT); // Set pin as OUTPUT
- Serial.begin(9600); // Start serial communication at 9600 bps
- }
- 
- void loop() {
- while (Serial.available()) { // If data is available to read,
- val = Serial.read(); // read it and store it in val
- }
- if (val == 'H') { // If H was received
- digitalWrite(ledPin, HIGH); // turn the LED on
- } else {
- digitalWrite(ledPin, LOW); // Otherwise turn it OFF
- }
- delay(100); // Wait 100 milliseconds for next reading
- }
- 
- */
