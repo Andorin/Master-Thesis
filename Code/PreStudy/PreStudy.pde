@@ -6,13 +6,13 @@ int portNumber;
 
 char[] charData = new char[15];
 int charIndex = 0;
-int i=0;
+int i=0;      
 PrintWriter output;
 
 void setup() {
  output = createWriter("testdata.txt");
  for (int i=0; i< Serial.list().length; i++) {
-     if(Serial.list()[i].equals("/dev/tty.usbmodem146211")) {
+     if(Serial.list()[i].equals("/dev/tty.usbmodem144411")) {
        portNumber = i;
      }
  }
@@ -59,9 +59,12 @@ void handleInput(){
       output.print(tempData[1] + ",");
       int n = 2;
       while(tempData[n] != 'x'){
-        output.print(tempData[n]);
+        if(tempData[n] != 't'){
+          output.print(tempData[n]);
+        }
         n++;
       }
+      output.println();
       output.flush();
       break;
     case 'S':
