@@ -13,6 +13,7 @@ const int blue = 10;
 const int motor = 9;
 const int cooling = 13;
 const int interuptButton = 7;
+const int abortButton = 2;
 int wait = 50;
 int intensity = 0;
 int motorIntensity = 0;
@@ -28,7 +29,8 @@ int randomNumber;
 //int stimuliArray[] = {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4};
 int inByte = 0;
 int caseCounter = 0;
-const int maxCases = 25;
+const int maxCases = 100;
+volatile bool toAbort = false;
 
 
 void ledPulse(String color);
@@ -41,6 +43,7 @@ void studyFinished();
 void establishConnection();
 void ledAction();
 void slowMotorAction();
+void abortPressed();
 
 void setup() {
   // put your setup code here, to run once:
@@ -55,6 +58,8 @@ void setup() {
     ;
   }
   pinMode(interuptButton, INPUT_PULLUP);
+  pinMode(abortButton, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(abortButton), abortPressed, CHANGE);
   //wait for the button to be pressed before start
   while (digitalRead(interuptButton) == 1) {
     ;
@@ -63,11 +68,15 @@ void setup() {
 }
 
 void loop() {
-  
+
   if((Serial.available() >= 0) || stimulusActive){ //only proceed if processing is done with its part and ready to receive
 
     if (!stimulusActive) { //choose new stimulus after last one was handled
       wasInterrupted = false;
+
+      if(toAbort){
+        condition = "finished";
+      }
 
       if (condition == "water") { // random number without sound for water
         randomNumber = random(0,4);
@@ -119,9 +128,9 @@ void loop() {
       ttp = millis() - startTime;
       resetAll();
       wasInterrupted = false;
-      digitalWrite(red, HIGH);
-      delay(500);
-      digitalWrite(red, LOW);
+      //digitalWrite(red, HIGH);
+      //delay(500);
+      //digitalWrite(red, LOW);
       Serial.print("D");
       Serial.print(randomNumber);
       Serial.print("t");
@@ -236,6 +245,10 @@ void slowMotorAction(){
     ;
   }
   wasInterrupted = true;
+}
+
+void abortPressed(){
+  toAbort = true;
 }
 
 void studyFinished(){
