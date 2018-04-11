@@ -29,7 +29,7 @@ int randomNumber;
 //int stimuliArray[] = {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4};
 int inByte = 0;
 int caseCounter = 0;
-const int maxCases = 100;
+const int maxCases = 50;
 volatile bool toAbort = false;
 
 
@@ -59,7 +59,7 @@ void setup() {
   }
   pinMode(interuptButton, INPUT_PULLUP);
   pinMode(abortButton, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(abortButton), abortPressed, CHANGE);
+  //attachInterrupt(digitalPinToInterrupt(abortButton), abortPressed, CHANGE);
   //wait for the button to be pressed before start
   while (digitalRead(interuptButton) == 1) {
     ;
@@ -79,7 +79,7 @@ void loop() {
       }
 
       if (condition == "water") { // random number without sound for water
-        randomNumber = random(0,4);
+        randomNumber = random(0,3);
       } else if (condition == "land"){
         randomNumber = random(0,5);
       } else if (condition == "finished"){
@@ -101,7 +101,7 @@ void loop() {
           stimulusActive = true;
           motorAction(168);
           break;
-        case 2:
+        case 4:
           stimulusActive = true;
           peltierAction();
           break;
@@ -109,7 +109,7 @@ void loop() {
           stimulusActive = true;
           ledAction();
           break;
-        case 4:
+        case 2:
           stimulusActive = true;
           slowMotorAction();
           break;
@@ -248,7 +248,7 @@ void slowMotorAction(){
 }
 
 void abortPressed(){
-  toAbort = true;
+  //toAbort = true;
 }
 
 void studyFinished(){

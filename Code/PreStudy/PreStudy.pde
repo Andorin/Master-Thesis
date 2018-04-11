@@ -10,9 +10,9 @@ int i=0;
 PrintWriter output;
 
 void setup() {
- output = createWriter("testdata.txt");
+ output = createWriter("user1_2.txt");
  for (int i=0; i< Serial.list().length; i++) {
-     if(Serial.list()[i].equals("/dev/tty.usbmodem144411")) {
+     if(Serial.list()[i].equals("/dev/cu.usbmodem411")) {
        portNumber = i;
      }
  }
