@@ -32,7 +32,6 @@ int caseCounter = 0;
 const int maxCases = 50;
 volatile bool toAbort = false;
 
-
 void ledPulse(String color);
 void motorAction(int intensity);
 void peltierAction();
@@ -43,7 +42,7 @@ void studyFinished();
 void establishConnection();
 void ledAction();
 void slowMotorAction();
-void abortPressed();
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -54,12 +53,11 @@ void setup() {
   pinMode(motor, OUTPUT);
   randomSeed(analogRead(0));
   Serial.begin(9600);
+  //resetAll();
   while (!Serial) {
     ;
   }
   pinMode(interuptButton, INPUT_PULLUP);
-  pinMode(abortButton, INPUT_PULLUP);
-  //attachInterrupt(digitalPinToInterrupt(abortButton), abortPressed, CHANGE);
   //wait for the button to be pressed before start
   while (digitalRead(interuptButton) == 1) {
     ;
@@ -73,16 +71,9 @@ void loop() {
 
     if (!stimulusActive) { //choose new stimulus after last one was handled
       wasInterrupted = false;
-
-      if(toAbort){
-        condition = "finished";
-      }
-
-      if (condition == "water") { // random number without sound for water
-        randomNumber = random(0,3);
-      } else if (condition == "land"){
-        randomNumber = random(0,5);
-      } else if (condition == "finished"){
+      //randomNumber = 2;
+      randomNumber = random(0,6);
+      if (condition == "finished"){
         randomNumber = 9;
       }
 
@@ -101,17 +92,17 @@ void loop() {
           stimulusActive = true;
           motorAction(168);
           break;
-        case 4:
+        case 2:
           stimulusActive = true;
-          peltierAction();
+          slowMotorAction();
           break;
         case 3:
           stimulusActive = true;
           ledAction();
           break;
-        case 2:
+        case 4:
           stimulusActive = true;
-          slowMotorAction();
+          peltierAction();
           break;
         case 5:
           stimulusActive = true;
@@ -166,9 +157,8 @@ void playSound(){
   Serial.print(randomNumber);
   Serial.println("x");
   while (digitalRead(interuptButton) == 1) {
-    digitalWrite(blue, 255);
+    ;
   }
-  digitalWrite(blue, 0);
   Serial.print('I');
   Serial.print(randomNumber);
   Serial.println("x");
@@ -192,7 +182,7 @@ void resetAll(){
   analogWrite(led, 0);
   analogWrite(red, 0);
   analogWrite(blue, 0);
-  analogWrite(motor, 0);
+  analogWrite(motor, 1);
   digitalWrite(cooling, LOW);
   intensity = -15;
 }
@@ -234,21 +224,17 @@ void ledAction(){
 
 void slowMotorAction(){
   stimulusActive = true;
-  intensity = 1;
+  intensity = 60;
   startTime = millis();
   while(intensity >= 0 && digitalRead(interuptButton) == 1){
     analogWrite(motor, intensity);
     delay(wait);
-      intensity = min(168, intensity + 5);
+      intensity = min(168, intensity + 1);
   }
   while (digitalRead(interuptButton) == 1) {
     ;
   }
   wasInterrupted = true;
-}
-
-void abortPressed(){
-  //toAbort = true;
 }
 
 void studyFinished(){

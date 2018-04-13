@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.30)  22 MAR 2018 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.30)  6 APR 2018 16:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,7 +809,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `indexAddOn.aux'.
 
-(./indexAddOn.tex) <images/titlepage_CID.pdf, id=64, 597.50731pt x 845.0471pt>
+(./indexAddOn.tex) <images/titlepage_CID.pdf, id=68, 597.50731pt x 845.0471pt>
 File: images/titlepage_CID.pdf Graphic file (type pdf)
 
 <use images/titlepage_CID.pdf>
@@ -838,7 +838,7 @@ ntifier (name{page.i}) has been already used, duplicate ignored
                    \relax 
 l.13 \end{titlepage}
                     
-<images/oathstatement.pdf, id=105, 597.23125pt x 845.1575pt>
+<images/oathstatement.pdf, id=109, 597.23125pt x 845.1575pt>
 File: images/oathstatement.pdf Graphic file (type pdf)
 
 <use images/oathstatement.pdf>
@@ -862,17 +862,17 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
  (./main.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 10.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 9.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+LaTeX Font Info:    Try loading font information for U+msa on input line 9.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+LaTeX Font Info:    Try loading font information for U+msb on input line 9.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1084,22 +1084,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
 (./appendix_02.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 0F394BF8042DE1351E5FEC23A22CB591;782
-(rerunfilecheck)             After:  9AF5B75A498688A7616E5CB521AC7DA9;839.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 9AF5B75A498688A7616E5CB521AC7DA9;839.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 9128 strings out of 492995
- 132473 string characters out of 6132703
- 246414 words of memory out of 5000000
- 12338 multiletter control sequences out of 15000+600000
+ 9129 strings out of 492995
+ 132486 string characters out of 6132703
+ 246417 words of memory out of 5000000
+ 12339 multiletter control sequences out of 15000+600000
  32299 words of font info for 85 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  40i,11n,48p,1826b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1112,10 +1105,10 @@ f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2017/texmf-dist
 type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pala
 tino/uplri8a.pfb>
-Output written on main.pdf (42 pages, 495340 bytes).
+Output written on main.pdf (42 pages, 495350 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
+ 362 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
  62 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

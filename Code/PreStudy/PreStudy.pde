@@ -1,4 +1,5 @@
 import processing.serial.*;
+import processing.sound.*;
 
 
 Serial myPort;
@@ -8,11 +9,15 @@ char[] charData = new char[15];
 int charIndex = 0;
 int i=0;      
 PrintWriter output;
+SoundFile soundfile;
+long ttp = 0; // time to perception.
+long startTime = 0;
 
 void setup() {
- output = createWriter("user1_2.txt");
+ output = createWriter("test.txt");
+ soundfile = new SoundFile(this, "sonarcut.mp3");
  for (int i=0; i< Serial.list().length; i++) {
-     if(Serial.list()[i].equals("/dev/cu.usbmodem411")) {
+     if(Serial.list()[i].equals("/dev/cu.usbmodem146411")) {
        portNumber = i;
      }
  }
@@ -69,9 +74,15 @@ void handleInput(){
       break;
     case 'S':
       println("S");
+      soundfile.play();
+      startTime = millis();
       break;
     case 'I':
       println("I");
+      ttp = millis() - startTime;
+      soundfile.stop();
+      output.println(5 + "," + ttp);
+      output.flush();
       break;
     case 'F':
       println("F - Finished Session");

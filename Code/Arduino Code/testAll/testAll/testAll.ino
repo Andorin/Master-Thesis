@@ -10,17 +10,18 @@ void setup() {
   pinMode(cooling, OUTPUT);
   pinMode(red, OUTPUT);
   pinMode(motor, OUTPUT);
+  digitalWrite(cooling, LOW);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   analogWrite(red, 255);
-  analogWrite(motor, 168);
+  //analogWrite(motor, 168);
   digitalWrite(cooling, HIGH);
-  delay(5000);
+  delay(4000);
 
   analogWrite(red, 0);
-  analogWrite(motor, 0);
+  analogWrite(motor, 60);
   digitalWrite(cooling, LOW);
   delay(4000);
 }
