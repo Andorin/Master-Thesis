@@ -29,8 +29,9 @@ int randomNumber;
 //int stimuliArray[] = {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4};
 int inByte = 0;
 int caseCounter = 0;
-const int maxCases = 50;
-volatile bool toAbort = false;
+const int maxCases = 42;
+int cases[] = {};
+int caseCounterArray[] = {8,8,8,8,8,8};
 
 void ledPulse(String color);
 void motorAction(int intensity);
@@ -42,6 +43,7 @@ void studyFinished();
 void establishConnection();
 void ledAction();
 void slowMotorAction();
+void generateCaseArray();
 
 
 void setup() {
@@ -62,6 +64,7 @@ void setup() {
   while (digitalRead(interuptButton) == 1) {
     ;
   }
+  generateCaseArray();
   delay(2000);
 }
 
@@ -242,5 +245,19 @@ void studyFinished(){
   Serial.println("Fx");
   while(1){
     ;
+  }
+}
+
+void generateCaseArray(){
+  int i;
+  while (i < maxCases) {
+    randomNumber = random(0, 6);
+    if (caseCounterArray[randomNumber] <= 0){
+      ;
+    } else {
+      cases[i] = randomNumber;
+      i++;
+      caseCounterArray[randomNumber] -= 1;
+    }
   }
 }
