@@ -17,7 +17,7 @@ void setup() {
  output = createWriter("test.txt");
  soundfile = new SoundFile(this, "sonarcut.mp3");
  for (int i=0; i< Serial.list().length; i++) {
-     if(Serial.list()[i].equals("/dev/cu.usbmodem146411")) {
+     if(Serial.list()[i].equals("/dev/cu.usbmodem411")) {
        portNumber = i;
      }
  }
@@ -31,6 +31,7 @@ void setup() {
 
 void draw() {
    while (myPort.available() > 0) {
+     print("rc");
      char readChar = myPort.readChar();
      //print(readChar);
      charData[i] = readChar;

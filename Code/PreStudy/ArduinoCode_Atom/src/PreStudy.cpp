@@ -24,14 +24,16 @@ bool wasInterrupted = false;
 bool stimulusActive = false;
 unsigned long ttp = 0; // time to perception.
 unsigned long startTime = 0;
-int stimuliArray[] = {0,1,2,3,4,0,2,1,0,4,9};
 int randomNumber;
-//int stimuliArray[] = {0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4};
+/* 1 */int stimuliArray[] = {1,0,1,1,2,3,0,3,4,0,2,1,3,4,4,1,5,4,0,3,2,1,4,0,3,0,3,3,0,2,0,4,5,3,2,5,4,1,2,5,1,4,9};
+/* 2 *///int stimuliArray[] = {2,1,5,4,4,5,1,5,4,1,5,3,3,4,1,5,0,1,4,0,5,5,4,2,4,2,0,5,3,1,2,1,2,2,3,2,0,3,4,2,3,1,9};
+/* 3 *///int stimuliArray[] = {1,0,1,3,1,4,1,3,0,1,5,1,4,1,1,3,5,3,3,5,2,2,5,0,4,2,5,2,0,5,2,3,0,3,4,2,4,3,5,2,2,5,9};
+/* 4 *///int stimuliArray[] = {5,4,5,0,0,1,1,3,1,0,4,5,3,1,0,4,3,2,1,2,5,3,5,1,3,5,0,4,5,4,5,2,0,3,0,1,2,4,2,0,3,4,9};
+/* 5 *///int stimuliArray[] = {0,5,3,1,3,2,1,2,2,1,0,2,4,5,4,5,4,0,5,5,0,3,5,5,2,5,4,0,3,1,4,2,1,3,4,0,3,1,3,4,0,3,9};
+/* 6 *///int stimuliArray[] = {4,3,0,4,2,4,1,5,5,1,0,5,0,2,4,1,4,2,4,3,0,4,1,4,0,2,1,2,5,0,5,2,3,1,2,0,1,2,5,3,5,5,9};
 int inByte = 0;
 int caseCounter = 0;
 const int maxCases = 42;
-int cases[] = {};
-int caseCounterArray[] = {8,8,8,8,8,8};
 
 void ledPulse(String color);
 void motorAction(int intensity);
@@ -64,8 +66,7 @@ void setup() {
   while (digitalRead(interuptButton) == 1) {
     ;
   }
-  generateCaseArray();
-  delay(2000);
+  delay(4000);
 }
 
 void loop() {
@@ -74,15 +75,12 @@ void loop() {
 
     if (!stimulusActive) { //choose new stimulus after last one was handled
       wasInterrupted = false;
-      //randomNumber = 2;
-      randomNumber = random(0,6);
-      if (condition == "finished"){
-        randomNumber = 9;
-      }
 
-      if (caseCounter < maxCases) {
+      randomNumber = stimuliArray[caseCounter];
+
+      if (randomNumber != 9) {
         caseCounter++;
-      } else {
+      } else if (randomNumber == 9){
         condition = "finished";
       }
 
@@ -122,9 +120,6 @@ void loop() {
       ttp = millis() - startTime;
       resetAll();
       wasInterrupted = false;
-      //digitalWrite(red, HIGH);
-      //delay(500);
-      //digitalWrite(red, LOW);
       Serial.print("D");
       Serial.print(randomNumber);
       Serial.print("t");
@@ -245,19 +240,5 @@ void studyFinished(){
   Serial.println("Fx");
   while(1){
     ;
-  }
-}
-
-void generateCaseArray(){
-  int i;
-  while (i < maxCases) {
-    randomNumber = random(0, 6);
-    if (caseCounterArray[randomNumber] <= 0){
-      ;
-    } else {
-      cases[i] = randomNumber;
-      i++;
-      caseCounterArray[randomNumber] -= 1;
-    }
   }
 }
