@@ -214,6 +214,7 @@ void ledPulse(String color){
 void ledAction(){
   stimulusActive = true;
   analogWrite(red, 255);
+  startTime = millis();
   while (digitalRead(interuptButton) == 1) {
     ;
   }
