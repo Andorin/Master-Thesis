@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.30)  7 JUN 2018 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.30)  15 JUN 2018 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,7 +809,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `indexAddOn.aux'.
 
-(./indexAddOn.tex) <images/titlepage_CID.pdf, id=76, 597.50731pt x 845.0471pt>
+(./indexAddOn.tex) <images/titlepage_CID.pdf, id=84, 597.50731pt x 845.0471pt>
 File: images/titlepage_CID.pdf Graphic file (type pdf)
 
 <use images/titlepage_CID.pdf>
@@ -838,7 +838,7 @@ ntifier (name{page.i}) has been already used, duplicate ignored
                    \relax 
 l.13 \end{titlepage}
                     
-<images/oathstatement.pdf, id=117, 597.23125pt x 845.1575pt>
+<images/oathstatement.pdf, id=125, 597.23125pt x 845.1575pt>
 File: images/oathstatement.pdf Graphic file (type pdf)
 
 <use images/oathstatement.pdf>
@@ -862,17 +862,17 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.88> not available
  (./main.toc
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 8.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 8.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 8.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -984,23 +984,24 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.74> not available
 
  (./relatedwork.tex
 Chapter 2.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 14.
 ) [3
 
 
 
 
 
-] [4]
+] [4
+
+
+
+]
 \openout2 = `ownwork.aux'.
 
  (./ownwork.tex
 Chapter 3.
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 14.
 ) [5
-
-
-
 
 
 ] [6
@@ -1051,8 +1052,53 @@ Appendix B.
 
 
 ] [16] (./main.bbl
+Underfull \hbox (badness 2189) in paragraph at lines 9--14
+[]\OT1/ppl/m/n/10.95 John McKen-zie.  Nav-i-mate ``claims'' to have un-der-
+ []
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
+
+Underfull \hbox (badness 6876) in paragraph at lines 9--14
+\OT1/ppl/m/n/10.95 wa-ter gps but then shows how good they can
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+\OT1/ppl/m/n/10.95 fin back-wards. (dema 2009 prod-uct an-nounce-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+\OT1/ppl/m/n/10.95 ments), 2009.  []$\OT1/pcr/m/n/10.95 http : / / scubagadget 
+. com /
+ []
+
+
+Overfull \hbox (513.41898pt too wide) in paragraph at lines 9--14
+\OT1/pcr/m/n/10.95 navimate-[]claims-[]to-[]have-[]underwater-[]gps-[]but-[]the
+n-[]shows-[]how-[]good-[]they-[]can-[]fin-[]backwards-[]dema-[]2009-[]product-[
+]announcements/$[]\OT1/ppl/m/n/10.95 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+[]\OT1/ppl/m/n/10.95 Kelly Ne-howig.  Nav-dive -- gps-based nav-i-ga-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+\OT1/ppl/m/n/10.95 tion for scuba divers, 2014.  []$\OT1/pcr/m/n/10.95 https : 
+/ / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
+\OT1/pcr/m/n/10.95 kickstarter . com / projects / 1889195857 /
+ []
+
+
+Overfull \hbox (31.64206pt too wide) in paragraph at lines 16--20
+\OT1/pcr/m/n/10.95 navdive-[]gps-[]based-[]navigation-[]for-[]scuba-[]divers /
+ []
 
 ) [17
 
@@ -1075,17 +1121,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2F44E8C54925DAED962952F00EC8F607;983.
+(rerunfilecheck)             Checksum: FE39C1F1500A55D2DAF9EFDEE44F1E48;1125.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 9106 strings out of 492995
- 132144 string characters out of 6132703
- 243417 words of memory out of 5000000
- 12321 multiletter control sequences out of 15000+600000
+ 9120 strings out of 492995
+ 132320 string characters out of 6132703
+ 243475 words of memory out of 5000000
+ 12331 multiletter control sequences out of 15000+600000
  32299 words of font info for 85 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 40i,12n,51p,1826b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,11n,48p,1826b,363s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/tex
@@ -1094,10 +1140,10 @@ t/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
 urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/pal
 atino/uplri8a.pfb>
-Output written on main.pdf (38 pages, 481841 bytes).
+Output written on main.pdf (38 pages, 489595 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 301 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
