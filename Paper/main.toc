@@ -4,8 +4,9 @@
 \contentsline {chapter}{\numberline {}Conventions}{xvii}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Related work}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Underwater Navigation Systems}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Feedback modalities}{3}{section.2.2}
+\contentsline {section}{\numberline {2.1}Technology for Underwater Positioning Systems}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Underwater Navigation Systems}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Feedback modalities}{4}{section.2.3}
 \contentsline {chapter}{\numberline {3}Hardware Prototype and Software }{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Hardware Prototype}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}Software}{5}{section.3.2}
