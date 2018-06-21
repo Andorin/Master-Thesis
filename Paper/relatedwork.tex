@@ -7,7 +7,7 @@
 
 \chapter{Related work}
 \label{relatedwork}
-
+\todo{fix citation}
 In this chapter we give an overview of related work and research in the the fields of under water navigation systems. 
 It is divided into three parts.
 First we give an overview of currently used technology used for underwater position tracking and the issues in comparison with common GPS.
@@ -15,8 +15,14 @@ Second it covers existing systems which incorporate position tracking and underw
 
 \section{Technology for Underwater Positioning Systems}
 
+It is commonly known that radio signals do not propagate underwater.
+Currently state of the art solutions consists of large and expensive inertial measurement units. 
+Those are for example used in submarines and use the last known position in combination with military grade accelerometer and diving depth to interpolate the current location \citep{meyer}.
 
-
+\mnote{undewater data fusion}
+\cite{li} developed a data fusion approach for underwater position tracking using the data from a bow array and a side array of sonar sensors.
+Their method address issues of data fusion like time-space normalization and data transfer rates.
+It has been evaluated by running numerical simulations.
 
 \section{Underwater Navigation Systems}
 
@@ -29,7 +35,13 @@ The device receives the signals and uses the information of the GPS and the tran
 It shows the direction to previously set locations and positional information in text form. 
 A desktop application lets the user inspect their diving path and add landmarks for locations of interest.
 
+\mnote{Ariadna Tech}
+\cite{ariadna} developed a system which uses an initial GPS location from the wrist unit before submerging and switches to  inertial sensors afterwards.
+The sensors track the divers real-time position, speed, heading, and distance information using a navigation transmitter worn on the leg.
+It calculates the information in real-time and sends it wireless to to the wrist unit which displays it on screen.
 
+
+\cite{waterlinked} uses four receiver and 
 
 \section{Feedback modalities}
 
