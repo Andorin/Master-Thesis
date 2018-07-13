@@ -25,4 +25,4 @@
 \contentsline {chapter}{\numberline {A}TITLE OF THE FIRST APPENDIX}{13}{appendix.A}
 \contentsline {chapter}{\numberline {B}TITLE OF THE SECOND APPENDIX}{15}{appendix.B}
 \contentsline {chapter}{\numberline {}Bibliography}{17}{section*.12}
-\contentsline {chapter}{\numberline {}Index}{19}{section*.14}
+\contentsline {chapter}{\numberline {}Index}{17}{section*.13}
