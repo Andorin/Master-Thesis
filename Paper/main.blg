@@ -14,6 +14,10 @@ A level-1 auxiliary file: evaluation.aux
 A level-1 auxiliary file: summaryandfuturework.aux
 A level-1 auxiliary file: appendix_01.aux
 A level-1 auxiliary file: appendix_02.aux
+Illegal, another \bibstyle command---line 47 of file main.aux
+ : \bibstyle
+ :          {}
+I'm skipping whatever remains of this command
 Database file #1: thesis.bib
 You've used 6 entries,
             2773 wiz_defined-function locations,
@@ -56,3 +60,4 @@ warning$ -- 0
 while$ -- 20
 width$ -- 0
 write$ -- 82
+(There was 1 error message)
