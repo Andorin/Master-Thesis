@@ -20,7 +20,7 @@ The prototype has to incorporate these methods as unobtrusive and comfortable as
 Electronic connections have to be waterproof, undisturbing, and failsafe.
 Furthermore all components should be affordable to provide an advantage over commercial solutions.
 
-To investigate the recognition times and comfort of each technique we built a prototype composed of one LED in the diving goggles as well as a waterproof vibration motor and a peltier cooling module in a stretchable headband.
+To investigate the recognition times and comfort of each technique we built a prototype composed of one LED in the diving goggles as well as a waterproof vibration motor and a Peltier cooling module in a stretchable headband.
 The headphones are provided separately.
 
 \paragraph{Visual Feedback}
@@ -67,12 +67,13 @@ Therefore we start at 1,18V and increase to 3.3V over 5.4 seconds.
 
 \paragraph{Thermal Feedback}
 
+\todo{describe how peltier works}
 For thermal feedback we choose a CUI CP6014 Thermoelectric Module. 
 \cite{Peiris_thermoVR} have shown that users prefer cooling over heating.
 Cooling also performs better when it comes to recognition time.
 Previously we tested heating and cooling effects in water with 21 degrees and cooling was much faster perceivable than heating.
 Additionally heating effects were rarely recognizable.
-The peltier module has a maximum voltage of 2.1V and maximum current of 6A.
+The Peltier module has a maximum voltage of 2.1V and maximum current of 6A.
 Therefore we use an external battery combined with a relay to run it.
 There are specific circuit boards to control the temperature of thermoelectric cooing elements.
 However we considered that running it on full power is sufficient for our purpose since we are interested in the fastest possible reaction times underwater.
@@ -81,40 +82,104 @@ However we considered that running it on full power is sufficient for our purpos
 \subsection{Hardware Prototype}
 \todo{more pictures of prototype creation and the electronics}
 
-As shown in figure \ref{fig:ledcloseup} the LED is glued to the diving goggles.
-
+As shown in figure~\ref{fig:ledcloseup} the LED is glued to the diving goggles between the silicone and the frame.
+There are three reasons to place the LED there.
+First, the LED is not in sight or noticeable when turned off and thus unobtrusive.
+Second, the light is diffused by the silicone leading to non-dazzling feedback.
+Third, the cable routing is easier compared to placing it within the silicone and still make sure no water gets in.
 
 \begin{figure}
 	\includegraphics[width= \textwidth]{images/LEDcloseupcut.png}
 	\caption{LED insulated and attached between the silicone and frame of the diving goggles using hotglue. }~\label{fig:ledcloseup}
 \end{figure}
 
+In addition to the stretchability of the headband it features \todo{length of fastener} a pair of hook and loop fastener as shown in figure~\ref{fig:headbandfastener}.
+This enables adjustable, tight, and still comfortable wear of the headband.
+The fasteners were sewn to the 40mm wide elastic band using a Bernina 880.
 
-Figure~\ref{fig:studysetupcut} shows the prototype parts worn by the user.
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/headbandfastener.png}
+	\caption{Stretchable headband with hook and loop fastener+ sewn to it. Allows comfortable adjustment on different head froms and sizes.}~\label{fig:headbandfastener}
+\end{figure}
+
+To sense the cooling effect of the thermoelectric module it has to be placed directly onto the users skin.
+We achieve this by cutting two holes in the elastic band and put the VCC and Ground wires through it. 
+Although the edges of the module seem to be uncomfortable, none of the users noticed it at all while it was turned off.
+The heat produced by the Peltier element is no issue underwater since the water naturally conducts the heat away.
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/peltier.png}
+	\caption{Peltier element mounted to the headband to be placed directly on the users skin.}~\label{fig:peltier}
+\end{figure}
+
+As depicted in figure~\ref{fig:headbandmotorbag} a piece of the elastic band was sewn to the headband to house the vibration motor.
+Since we choose an already waterproof vibration motor the only challenge is to keep the motor in place and still provide as much tactile performance to the user as possible.
+Therefore the the piece of elastic band is sewn to the headband to be at maximum stretch when the motor is in the bag.
+The kinetic energy is better transferred by rigid objects.
+As for the Peltier element, the motor is not perceived by the user wearing the headband while it is turned off.
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/headbandmotorbag.png}
+	\caption{Piece of the stretchband sewn to the headband as a bag for the vibration motor.}~\label{fig:headbandmotorbag}
+\end{figure}
+
+To prevent the user form tangling up in the wires we sew pieces of the elastic material to the headband as shown in figure \ref{fig:headbandpatches}.
+These wireways leading to one side of the headband make wire management easier and prevent them from being damaged.
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/headbandpatches.png}
+	\caption{Pieces of the stretchband sewn to the headband as wireway for better management of the wires.}~\label{fig:headbandpatches}
+\end{figure}
+
+The user has to provide feedback if she notices one of the possible kinds of feedback we present to her.
+Figure~\ref{fig:button} shows the button we use for that purpose.
+We pick a large button used in arcade cabinets and a 3D printed case. 
+The button features vertical lift to prevent accidental pressing by the user. 
+Furthermore, the supervisor can hear a clearly recognizable click sound when the button was pressed which helps monitoring the functionality of hardware and software.
+A consequence of this button design is that the user has to press it outside the water.
+This is no issue since the user will stay at the pool edge anyway.
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/button.png}
+	\caption{The botton and the 3D printed case. To be pressed by the user when he recognizes feedback.}~\label{fig:button}
+\end{figure}
+\todo{length of ribbon cable} 
+The wires of the LED, vibration motor, Peltier element, and botton are joined with a ribbon cable depicted in figure~\ref{fig:wires}.
+As for all connections and soldering joints, they are made waterproof with glue and shrinking tube.
+The ribbon cable leads to the breadboard shown in figure~\ref{fig:breadboard}.
+The breadboard houses an Arduino Uno, the cables leading form the pins to the ribbon cable, a relay, and a battery case.
+The relay is connected to the Arduino Uno  which controls when it connects the two AA batteries with the Peltier circuit.
+
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/wires.png}
+	\caption{Waterproof join of wires from each actuator to the ribbon cable.}~\label{fig:wires}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width= \textwidth]{images/breadboard.png}
+	\caption{The Arduino controlling the relay and other components of the prototype via the ribbon cable. The batteries power the Peltier element when the relay is set correspondingly.}~\label{fig:breadboard}
+\end{figure}
+
+
+Figure~\ref{fig:studysetupcut} shows all prototype parts worn by the user.
  
 \begin{figure}
 	\includegraphics[width= \textwidth]{images/studysetupcut.png}
 	\caption{Headband, diving goggles, and waterproof headphones with the integrated LED, Vibration motor, and Thermoelectric cooling module.}~\label{fig:studysetupcut}
 \end{figure}
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/breadboard.png}
-	\caption{The Arduino controlling the relay and other components of the prototype via the ribbon cable. The batteries power the peltier when the relay is set correspondingly.}~\label{fig:ledcloseup}
-\end{figure}
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/button.png}
-	\caption{The botton and the 3D printed case. To be pressed by the user when he recognizes feedback.}~\label{fig:ledcloseup}
-\end{figure}
-
-
-\subsection{Testing}
-
-
- 
 \subsection{Safety}
 
+Since we operate electronics in an underwater test environment, safety concerns arise.
+In fact, the voltage and current are below critical values.
+Besides, all  wired connections are waterproof and tested for three days in a box filled with water.
+The breadboard is always placed in some distance and above the water surface.
+During the operation of the prototype in underwater scenario the breadboard and batteries are loosely covered by a towel to protect it against splashing water.
 
-
+In case the user leaves the pool edge the ribbon cable falls off the breadboard instead of pulling it down. 
 
 \section{Software}
+
+\subsection{Testing}
