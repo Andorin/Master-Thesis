@@ -9,13 +9,60 @@
 \label{evaluation}
 \index{evaluation|(}
 
-In this chapter we will evaluate our prototypes with respect to the quantitative and qualitative aspects of the different feedback methods. We are interested to what extent the perception of feedback differs onshore versus underwater regarding time until the stimulus is perceived. Afterwards the user gives feedback in order to tell if the conditions make a difference with respect to preference. 
-
-
-Since vibro-tactile and visual feedback is common today for several application ashore we let users test it onshore as well as under water. We drop sound in the underwater condition since it requires specific waterproof earphones or bone conduction headphones. Both exist and provide a comparable quality. The wireless connection however is not trivial underwater. Auditory feedback is broadly used in today's traffic and therefore not of particular interest in our case. 
+In this chapter we will evaluate our prototypes with respect to the quantitative and qualitative aspects of the different feedback methods. We are interested to what extent the perception of feedback differs onshore versus underwater regarding time until the stimulus is perceived. 
+We conducted a user study consisting of two parts: in the first part we measured reaction times between presentation of the feedback and it being perceived by the user.
+The second part was a questionnaire investigating preferences and experiences regarding the feedback types and their applicability for navigation under water. 
+  
 
 \section{User Study}
-The user study is divided into two groups. The first one is testing the prototype under normal condition while sitting on a chair where the other group is examining the feedback  underwater. 
 
+The apparatus consists of a button at the edge of the pool, diving goggles with an LED on the right side, a headband with a vibration motor and a thermoelectric cooler (TEC), and waterproof in-ear headphones. 
+These are encapsulated and connected to an Arduino Uno except for the headphones which are directly connected to the MacBook Pro. 
+The Arduino measures the time between the activation of a feedback and the press of the button. 
+For sound the Arduino sends the command to Processing which then plays the sound file and measures the reaction time. 
+Processing logs the time in milliseconds and the corresponding feedback for further analysis.
 
- \index{evaluation|)}
+\subsection{Procedure}
+The participants took a shower and were asked to swim a few laps until they felt at ease. 
+They put on the diving goggles and the headband first, and we ensured that the TEC had direct contact to the skin and that the headband was worn firmly and comfortably. 
+Finally, participants put on the snorkel and the earphones. Then the participant was instructed to submerge, start the study by pressing the button for the first time, and press the button as soon as she perceives a stimulus (Fig. 2). 
+Every run included each stimulus eight times in random order with the same stimulus being repeated at most two times in a row. After the button was pressed the next stimulus was randomly delayed between two and eight seconds to prevent adaption. 
+This was repeated at least four times per participant with some participants voluntarily doing more runs. 
+Participants were allowed to emerge anytime they feel uncomfortable or had issues with the equipment. 
+Afterwards, participants answered questions on a 5-point Likert scale regarding feedback recognition, feedback comfort, and imagining the feedback type for underwater navigation.
+
+\subsection{Design}
+The independent variable was STIMULUS (simple LED, pulsing LED, vibration, increasing vibration, cooling, sound). 
+A sequence of eight stimuli of each type in random order for each run and at least 4 runs per user resulted in (6 x 8 x 4) 192 trials per user in a within-subjects design (48 trials for every additional run). 
+The dependent variable is Time [ms] which denoted the time between a stimulus started and the button was pressed.
+
+\subsection{Results}
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{images/ResultsOfReactionTimes}
+	\caption{Results of the reaction time on different feedback types under water. Means and 95\% confidence intervals.}~\label{fig:reactiontimes}
+	\vspace{-2em}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{images/m_sd_table_noranking}
+	\caption{Means and standard deviations (less is better) of the results from the questionnaire.}~\label{fig:m_sd_table}
+\end{figure}
+
+A total of 10 users participated in the study (average age 24.1, 8 male), five of which had prior experience with diving or snorkeling. 
+391 outliers (results differed by more than 1.5 SD from the mean) were identified resulting in 2021 data points. 
+Only 4 participants recognized the TEC at all which led to the majority of outliers. 
+The remaining outliers are caused by issues with the equipment (e.g., water in the snorkel or goggles), forcing the participant to emerge.
+We log-transformed \emph{Time} for a repeated measures ANOVA. 
+{\sc stimulus} had a significant effect on \emph{Time} ($F\textsubscript{1991} = 852.97, p<.0001$). 
+Tukey HSD post hoc pairwise comparisons showed that the TEC (4580$ms$) was significantly slower compared to each other {\sc stimulus} and pulsing LED (615$ms$) was significantly slower than vibration (458$ms$) and simple LED (384$ms$).
+
+We used Friedman and Wilcoxon Signed Ranks tests to evaluate the questionnaire (cf.\ Table~\ref{fig:m_sd_table}).
+There was a significant difference in user rated recognition ($\chi^2$(5) = 39.73, $p<.001$).
+Post-hoc pairwise comparison revealed that the TEC was perceived significantly less than all other stimuli ($p<.005$). \newline
+There was a significant difference in user rated comfort ($\chi^2$(5) = 15.83, $p<.007$).
+Post-hoc pairwise comparison revealed that TEC was significantly less comfortable than all other stimuli ($p<.041$) and increasing vibration was significantly more comfortable than vibration ($p<.046$). \newline
+There was a significant difference in user rated navigation suitability ($\chi^2$(5) = 28.77, $p<.001$). 
+Post-hoc pairwise comparison revealed that only the TEC was rated significantly less suitable for underwater navigation ($p<.004$).
+
+\index{evaluation|)}
