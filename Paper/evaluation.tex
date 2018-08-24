@@ -16,15 +16,15 @@ The second part was a questionnaire investigating preferences and experiences re
 
 \section{User Study}
 
-The apparatus consists of a button at the edge of the pool, diving goggles with an LED on the right side, a headband with a vibration motor and a thermoelectric cooler (TEC), and waterproof in-ear headphones. 
+The apparatus consists of a button at the edge of the pool, diving goggles with an \emph{LED} on the right side, a headband with a vibration motor and a thermoelectric cooler (TEC), and waterproof in-ear headphones. 
 These are encapsulated and connected to an Arduino Uno except for the headphones which are directly connected to the MacBook Pro. 
 The Arduino measures the time between the activation of a feedback and the press of the button. 
-For sound the Arduino sends the command to Processing which then plays the sound file and measures the reaction time. 
+For sound the Arduino sends the command to Processing which then plays the \emph{Sound} file and measures the reaction time. 
 Processing logs the time in milliseconds and the corresponding feedback for further analysis.
 
 \subsection{Procedure}
 The participants took a shower and were asked to swim a few laps until they felt at ease. 
-They put on the diving goggles and the headband first, and we ensured that the TEC had direct contact to the skin and that the headband was worn firmly and comfortably. 
+They put on the diving goggles and the headband first, and we ensured that the \emph{peltier element} had direct contact to the skin and that the headband was worn firmly and comfortably. 
 Finally, participants put on the snorkel and the earphones. Then the participant was instructed to submerge, start the study by pressing the button for the first time, and press the button as soon as she perceives a stimulus (Fig. 2). 
 Every run included each stimulus eight times in random order with the same stimulus being repeated at most two times in a row. After the button was pressed the next stimulus was randomly delayed between two and eight seconds to prevent adaption. 
 This was repeated at least four times per participant with some participants voluntarily doing more runs. 
@@ -32,7 +32,7 @@ Participants were allowed to emerge anytime they feel uncomfortable or had issue
 Afterwards, participants answered questions on a 5-point Likert scale regarding feedback recognition, feedback comfort, and imagining the feedback type for underwater navigation.
 
 \subsection{Design}
-The independent variable was STIMULUS (simple LED, pulsing LED, vibration, increasing vibration, cooling, sound). 
+The independent variable was STIMULUS (\emph{simple LED}, \emph{pulsing LED}, vibration, increasing vibration, cooling, \emph{Sound}). 
 A sequence of eight stimuli of each type in random order for each run and at least 4 runs per user resulted in (6 x 8 x 4) 192 trials per user in a within-subjects design (48 trials for every additional run). 
 The dependent variable is Time [ms] which denoted the time between a stimulus started and the button was pressed.
 
@@ -51,33 +51,33 @@ The dependent variable is Time [ms] which denoted the time between a stimulus st
 
 A total of 10 users participated in the study (average age 24.1, 8 male), five of which had prior experience with diving or snorkeling. 
 391 outliers (results differed by more than 1.5 SD from the mean) were identified resulting in 2021 data points. 
-Only 4 participants recognized the TEC at all which led to the majority of outliers. 
+Only 4 participants recognized the \emph{peltier element} at all which \emph{LED} to the majority of outliers. 
 The remaining outliers are caused by issues with the equipment (e.g., water in the snorkel or goggles), forcing the participant to emerge.
 We log-transformed \emph{Time} for a repeated measures ANOVA. 
 {\sc stimulus} had a significant effect on \emph{Time} ($F\textsubscript{1991} = 852.97, p<.0001$). 
-Tukey HSD post hoc pairwise comparisons showed that the TEC (4580$ms$) was significantly slower compared to each other {\sc stimulus} and pulsing LED (615$ms$) was significantly slower than vibration (458$ms$) and simple LED (384$ms$).
+Tukey HSD post hoc pairwise comparisons showed that the \emph{peltier element} (4580$ms$) was significantly slower compared to each other {\sc stimulus} and pulsing \emph{LED} (615$ms$) was significantly slower than vibration (458$ms$) and simple \emph{LED} (384$ms$).
 
 We used Friedman and Wilcoxon Signed Ranks tests to evaluate the questionnaire (cf.\ Table~\ref{fig:m_sd_table}).
 There was a significant difference in user rated recognition ($\chi^2$(5) = 39.73, $p<.001$).
-Post-hoc pairwise comparison revealed that the TEC was perceived significantly less than all other stimuli ($p<.005$). \newline
+Post-hoc pairwise comparison revealed that the \emph{peltier element} was perceived significantly less than all other stimuli ($p<.005$). \newline
 There was a significant difference in user rated comfort ($\chi^2$(5) = 15.83, $p<.007$).
-Post-hoc pairwise comparison revealed that TEC was significantly less comfortable than all other stimuli ($p<.041$) and increasing vibration was significantly more comfortable than vibration ($p<.046$). \newline
+Post-hoc pairwise comparison revealed that \emph{peltier element} was significantly less comfortable than all other stimuli ($p<.041$) and increasing vibration was significantly more comfortable than vibration ($p<.046$). \newline
 There was a significant difference in user rated navigation suitability ($\chi^2$(5) = 28.77, $p<.001$). 
-Post-hoc pairwise comparison revealed that only the TEC was rated significantly less suitable for underwater navigation ($p<.004$).
+Post-hoc pairwise comparison revealed that only the \emph{peltier element} was rated significantly less suitable for underwater navigation ($p<.004$).
 
 \subsection{Discussion}
-The results and the tremendous power consumption show that the TEC is not suitable for underwater applications. 
-Partici- pants reported that it is hard to tell whether the TEC is active or if it is a cold flow of water. 
+The results and the tremendous power consumption show that the \emph{peltier element} is not suitable for underwater applications. 
+Partici- pants reported that it is hard to tell whether the \emph{peltier element} is active or if it is a cold flow of water. 
 The skin adapts to thermal changes quickly and makes consecutive cooling events hard to detect [6]. 
 Visual, vibrotactile, and auditory stimuli are suit- able for underwater navigation regarding reaction time (384 - 615ms). 
-Even though the LED feedback was fastest (384ms) the vibration (459ms) was perceived to be recognized faster. 
+Even though the \emph{LED} feedback was fastest (384ms) the vibration (459ms) was perceived to be recognized faster. 
 Binary feedback using light and vibration is perceived as less comfortable than the fading counterparts. 
-Therefore, in an un- derwater navigation scenario, instant feedback should be used for time critical events only. 
+Therefore, in an underwater navigation scenario, instant feedback should be used for time critical events only. 
 Otherwise, the more comfortable stimuli suffice. 
-Participants commented that LED feedback can be mistaken for water reflections or to be obstructive and distracting. 
-Sound was rated as being immediately perceiv- able (1.0), but some users felt uncomfortable wearing in-ear headphones under water. 
+Participants commented that \emph{LED} feedback can be mistaken for water reflections or to be obstructive and distracting. 
+\emph{Sound} was rated as being immediately perceivable (1.0), but some users felt uncomfortable wearing in-ear headphones under water. 
 Vibration on the other hand uses a different sense which is not occupied while diving/snorkeling and provides clear and comfortable feedback. 
-Furthermore, vibration feedback acts like bone conductance sound, and therefore, also includes additional auditory feedback.
+Furthermore, vibration feedback acts like bone conductance \emph{Sound}, and therefore, also includes additional auditory feedback.
 
 \subsection{Testing outside the water}
 
@@ -90,11 +90,11 @@ Again we let the user do as many trials as she was willing to do.
 Other than that the procedure and the user study program remain the same as described above.
 
 The results of the participant is shown in figure~\ref{fig:user12}.
-It is immediately notable that the visual stimulus is on average faster received in the under water condition (LED: 69.285 ms, Pulsing LED: 81.708 ms).
-Contrarily to the visual modality on average the haptic feedback of the vibration motor is faster perceived outside the water (Vibration: 28.822 ms, Increasing Vibration: 109.135 ms).
+It is immediately notable that the visual stimulus is on average faster received in the under water condition (\emph{LED}: 69.285 ms, \emph{Pulsing LED}: 81.708 ms).
+Contrarily to the visual modality on average the haptic feedback of the vibration motor is faster perceived outside the water (\emph{Vibration}: 28.822 ms, \emph{Increasing Vibration}: 109.135 ms).
 The most preeminent difference between the two mediums is measured when it comes to thermal feedback.
 Not only is the cooling effect of the peltier element recognized reliably by the participant, but also 3152.580 ms faster with 1427.657 ms.
-Sound was perceived negligibly faster underwater with 19.339 ms difference.
+\emph{Sound} was perceived negligibly faster underwater with 19.339 ms difference.
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{images/ResultsOfReactionTimesUser12.png}
@@ -102,6 +102,9 @@ Sound was perceived negligibly faster underwater with 19.339 ms difference.
 \end{figure}
 \index{evaluation|)}
 
+A reason for the slightly better performance of the \emph{LED} underwater can be explained by the fact that underwater the participants is facing the pool edge where the participant testing the system outside the water has more objects in the room to possibly look at. 
+However, the differences for \emph{LED}, \emph{Vibration}, and \emph{Sound} might adjust when testing with more users ashore.
+The water has a significant influence on the sensibility of the cooling effect provided by the \emph{peltier element}.
 
 
 
