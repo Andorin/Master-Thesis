@@ -9,19 +9,40 @@
 \label{summaryandfuturework}
 
 %here
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 
 \section{Summary and contributions}
 \label{summaryandfuturework.summary}
 
 %here
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We built and tested a prototype to investigate the applicability of four feedback modalities for the low-level underwater navigation context.
+The prototype consists of diving goggle with a LED glued to it, a stretchable headband with a peltier cooling element and vibration motor, a snorkel, and the electronics including an Arduino Uno.
+Visual, tactile, thermal, auditory feedback was investigated for their perceptibility and comfort in underwater scenario.
+
+Results have shown that thermal feedback is not well suited for underwater application since it is not recognizable by a large amount of participants in the first place.
+It is heavily influenced by the water and perceivableness varies depending on the water temperature.
+This, however, was not observed outside the water where only the technical limitations of the peltier element prolongates the recognition by the user.
+Additionally the huge amount of power used by the peltier cooling element makes it impractical to use in mobile environment.
+
+Visual, vibration, and auditory feedback was perceived well and technically suited to provide underwater navigation cues.
+Qualitative analysis via a questionnaire, answered by the participants, revealed that vibration feedback performs best on a subjective level.
+It does not occupy any of the senses which used for diving in contrast to the LED.
+Some user report that wearing the waterproof in-ear headphones is uncomfortable and that they are not used to wear those underwater.
 
 \section{Future work}
 \label{summaryandfuturework.futurework}
 \index{future work|(}
+Our study solely focused on how fast the respective feedback can be perceived underwater and how comfortable it is.
+We did not yet investigate how accurate the feedback methods can communicate navigation cues in the field.
+In the future we will drop the peltier element due to its bad performance underwater and massive power consumption.
+Furthermore we will tweak our prototype to incorporate a symmetrical amount of LEDs and vibration motors.
+The exact amount has to be investigated with a separate user study.
+Accuracy of the navigation cues is the most interesting measurement after proving the perceivableness.
+To compare the performance of low level cues and more sophisticated approaches, like augmented reality diving goggles and precise auditory instruction via bone conduction headphones, further investigation in real world scenarios will be conducted.
 
+To conduct studies in the field the prototype will be made wireless.
+The primary challenges will be the waterproof incorporation of the power supply and electronics as well as establishing precise measurements.
+The omission of real time observation and communication requires technology presented in chapter~\ref{relatedwork}. 
 %here
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 \index{future work|)}
