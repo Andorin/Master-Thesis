@@ -55,14 +55,18 @@ We use the sound of a sonar since it suits the underwater scenario.
 \paragraph{Vibration Feedback}
 
 To provide feedback using vibration actuators we choose waterproof 7 mm vibration motors.
-They are working at 3.3V with 2.45g at 250Hz.
+They are working at 3.3 V with 2.45 g at 250 Hz.
 We tried to make smaller vibration motors waterproof.
 Using shrinking tubing and epoxy resin adhesive made them waterproof but running them over night underwater let them stop working regardless.
 Thus we have to stick to the larger motor.
 
 We handle the vibration feedback similar to the visual feedback and set it to maximum power instantaneously as well as increasing it over time.
 Test have shown that it requires a certain amount of voltage to feel a vibration even outside the water.
-Therefore we start at 1,18V and increase to 3.3V over 5.4 seconds.
+Therefore we start at 1,18 V and increase to 3.3 V over 5.4 seconds.
+
+Literature suggests to place tactile feedback at the shoulders or the hips \citep{Kiss:2018:NSM:3173574.3174191}.
+Since we aim to build a compact prototype we implement the vibration motor in the headband instead of an separate belt which would include more wires.
+Additionally we think that especially while snorkelling the users want an unobtrusive experience.
 
 
 \paragraph{Thermal Feedback}
@@ -72,7 +76,7 @@ For thermal feedback we choose a CUI CP6014 Thermoelectric Module.
 Cooling also performs better when it comes to recognition time.
 Previously we tested heating and cooling effects in water with 21 degrees and cooling was much faster perceivable than heating.
 Additionally heating effects were rarely recognizable.
-The Peltier module has a maximum voltage of 2.1V and maximum current of 6A.
+The Peltier module has a maximum voltage of 2.1V and maximum current of 6 A.
 Therefore we use an external battery combined with a relay to run it.
 There are specific circuit boards to control the temperature of thermoelectric cooing elements.
 However we considered that running it on full power is sufficient for our purpose since we are interested in the fastest possible reaction times underwater.
@@ -86,30 +90,30 @@ There are three reasons to place the LED there.
 First, the LED is not in sight or noticeable when turned off and thus unobtrusive.
 Second, the light is diffused by the silicone leading to non-dazzling feedback.
 Third, the cable routing is easier compared to placing it within the silicone and still make sure no water gets in.
-
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/LEDcloseupcut.png}
-	\caption{LED insulated and attached between the silicone and frame of the diving goggles using hotglue. }~\label{fig:ledcloseup}
-\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/LEDcloseupcut.png}
+%	\caption{LED insulated and attached between the silicone and frame of the diving goggles using hotglue. }~\label{fig:ledcloseup}
+%\end{figure}
 
 In addition to the stretchability of the headband it features \todo{length of fastener} a pair of hook and loop fastener as shown in figure~\ref{fig:headbandfastener}.
 This enables adjustable, tight, and still comfortable wear of the headband.
 The fasteners were sewn to the 40mm wide elastic band using a Bernina 880.
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/headbandfastener.png}
-	\caption{Stretchable headband with hook and loop fastener+ sewn to it. Allows comfortable adjustment on different head froms and sizes.}~\label{fig:headbandfastener}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/headbandfastener.png}
+%	\caption{Stretchable headband with hook and loop fastener+ sewn to it. Allows comfortable adjustment on different head froms and sizes.}~\label{fig:headbandfastener}
+%\end{figure}
 
 To sense the cooling effect of the thermoelectric module it has to be placed directly onto the users skin.
 We achieve this by cutting two holes in the elastic band and put the VCC and Ground wires through it. 
 Although the edges of the module seem to be uncomfortable, none of the users noticed it at all while it was turned off.
 The heat produced by the Peltier element is no issue underwater since the water naturally conducts the heat away.
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/peltier.png}
-	\caption{Peltier element mounted to the headband to be placed directly on the users skin.}~\label{fig:peltier}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/peltier.png}
+%	\caption{Peltier element mounted to the headband to be placed directly on the users skin.}~\label{fig:peltier}
+%\end{figure}
 
 As depicted in figure~\ref{fig:headbandmotorbag} a piece of the elastic band was sewn to the headband to house the vibration motor.
 Since we choose an already waterproof vibration motor the only challenge is to keep the motor in place and still provide as much tactile performance to the user as possible.
@@ -117,18 +121,18 @@ Therefore the the piece of elastic band is sewn to the headband to be at maximum
 The kinetic energy is better transferred by rigid objects.
 As for the Peltier element, the motor is not perceived by the user wearing the headband while it is turned off.
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/headbandmotorbag.png}
-	\caption{Piece of the stretchband sewn to the headband as a bag for the vibration motor.}~\label{fig:headbandmotorbag}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/headbandmotorbag.png}
+%	\caption{Piece of the stretchband sewn to the headband as a bag for the vibration motor.}~\label{fig:headbandmotorbag}
+%\end{figure}
 
 To prevent the user form tangling up in the wires we sew pieces of the elastic material to the headband as shown in figure \ref{fig:headbandpatches}.
 These wireways leading to one side of the headband make wire management easier and prevent them from being damaged.
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/headbandpatches.png}
-	\caption{Pieces of the stretchband sewn to the headband as wireway for better management of the wires.}~\label{fig:headbandpatches}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/headbandpatches.png}
+%	\caption{Pieces of the stretchband sewn to the headband as wireway for better management of the wires.}~\label{fig:headbandpatches}
+%\end{figure}
 
 The user has to provide feedback if she notices one of the possible kinds of feedback we present to her.
 Figure~\ref{fig:button} shows the button we use for that purpose.
@@ -138,10 +142,11 @@ Furthermore, the supervisor can hear a clearly recognizable click sound when the
 A consequence of this button design is that the user has to press it outside the water.
 This is no issue since the user will stay at the pool edge anyway.
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/button.png}
-	\caption{The botton and the 3D printed case. To be pressed by the user when he recognizes feedback.}~\label{fig:button}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/button.png}
+%	\caption{The botton and the 3D printed case. To be pressed by the user when he recognizes feedback.}~\label{fig:button}
+%\end{figure}
+
 \todo{length of ribbon cable} 
 The wires of the LED, vibration motor, Peltier element, and botton are joined with a ribbon cable depicted in figure~\ref{fig:wires}.
 As for all connections and soldering joints, they are made waterproof with glue and shrinking tube.
@@ -150,23 +155,23 @@ The breadboard houses an Arduino Uno, the cables leading form the pins to the ri
 The relay is connected to the Arduino Uno  which controls when it connects the two AA batteries with the Peltier circuit.
 
 
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/wires.png}
-	\caption{Waterproof join of wires from each actuator to the ribbon cable.}~\label{fig:wires}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/breadboard.png}
-	\caption{The Arduino controlling the relay and other components of the prototype via the ribbon cable. The batteries power the Peltier element when the relay is set correspondingly.}~\label{fig:breadboard}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/wires.png}
+%	\caption{Waterproof join of wires from each actuator to the ribbon cable.}~\label{fig:wires}
+%\end{figure}
+%
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/breadboard.png}
+%	\caption{The Arduino controlling the relay and other components of the prototype via the ribbon cable. The batteries power the Peltier element when the relay is set correspondingly.}~\label{fig:breadboard}
+%\end{figure}
 
 
 Figure~\ref{fig:studysetupcut} shows all prototype parts worn by the user.
  
-\begin{figure}
-	\includegraphics[width= \textwidth]{images/studysetupcut.png}
-	\caption{Headband, diving goggles, and waterproof headphones with the integrated LED, Vibration motor, and Thermoelectric cooling module.}~\label{fig:studysetupcut}
-\end{figure}
+%\begin{figure}
+%	\includegraphics[width= \textwidth]{images/studysetupcut.png}
+%	\caption{Headband, diving goggles, and waterproof headphones with the integrated LED, Vibration motor, and Thermoelectric cooling module.}~\label{fig:studysetupcut}
+%\end{figure}
 
 
 \subsection{Safety}
@@ -189,7 +194,7 @@ Furthermore it tracks the time a user needs to press the button after the feedba
 Processing receives the data frames from the micro controller and creates a file to log the data for further analysis or plays the sound file and tracks that time.
 
 \paragraph{Arduino Code}
-Each stimulus (increasing LED, LED, increasing vibration, vibration, sound, peltier element) is exclusively encoded with a number from \emph{0} to \emph{5}.
+Each stimulus (increasing LED, LED, increasing vibration, vibration, sound, Peltier element) is exclusively encoded with a number from \emph{0} to \emph{5}.
 Six distinct arrays were randomly generated only limited by prohibiting occurrences of the same stimuli in a row more than two times and by making sure each stimuli is active exactly 8 times.
 This results in 48 stimuli per program run.
 The random generation of the arrays is used to prevent participants from recognizing the order of the stimulus which might influence the results.
