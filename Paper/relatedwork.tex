@@ -27,11 +27,11 @@ It has been evaluated by running numerical simulations.
 \section{Underwater Navigation Systems}
 
 \mnote{Navimate}
-\cite{mckenzie} developed Navimate which uses a floating radio antenna for GPS and several underwater transducers to communicate with a wrist-worn device via acoustic signals. 
+\cite{navimate} developed Navimate which uses a floating radio antenna for GPS and several underwater transducers to communicate with a wrist-worn device via acoustic signals. 
 The device receives the signals and uses the information of the GPS and the transducers to determine its location and presents the information on the screen. 
 
 \mnote{NavDive}
-\cite{Nehowig} built NavDive which uses a floating GPS receiver wired to a mobile receiver held by the diver. 
+\cite{navdive} built NavDive which uses a floating GPS receiver wired to a mobile receiver held by the diver. 
 It shows the direction to previously set locations and positional information in text form. 
 A desktop application lets the user inspect their diving path and add landmarks for locations of interest.
 
@@ -40,8 +40,10 @@ A desktop application lets the user inspect their diving path and add landmarks 
 The sensors track the divers real-time position, speed, heading, and distance information using a navigation transmitter worn on the leg.
 It calculates the information in real-time and sends it wireless to to the wrist unit which displays it on screen.
 
-
-\cite{waterlinked} uses four receiver and 
+\mnote{WaterLinked}
+\cite{waterlinked} uses four hydro acoustic receiver in the water connected to a base station with access to a GPS antenna. 
+The tracked object or diver is equipped with a locator which acts as an beacon sending acoustic pulses. 
+These acoustic pulses are received be the four hydrophones and analyzed with time-of-arrival and the GPS data. This system enables tracking of submerged ROVs and divers but not for the divers themselves.
 
 \section{Feedback modalities}
 
