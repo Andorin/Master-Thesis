@@ -7,22 +7,25 @@
 
 \chapter{Related work}
 \label{relatedwork}
-\todo{fix citation}
+
 In this chapter we give an overview of related work and research in the the fields of under water navigation systems. 
 It is divided into three parts.
 First we give an overview of currently used technology used for underwater position tracking and the issues in comparison with common GPS.
 Second it covers existing systems which incorporate position tracking and underwater feedback today and third research regarding several feedback modalities. 
 
-\section{Technology for Underwater Positioning Systems}
-
 It is commonly known that radio signals do not propagate underwater.
 Currently state of the art solutions consists of large and expensive inertial measurement units. 
 Those are for example used in submarines and use the last known position in combination with military grade accelerometer and diving depth to interpolate the current location \citep{meyer}.
 
-\mnote{undewater data fusion}
-\cite{li} developed a data fusion approach for underwater position tracking using the data from a bow array and a side array of sonar sensors.
-Their method address issues of data fusion like time-space normalization and data transfer rates.
-It has been evaluated by running numerical simulations.
+\mnote{Inertial Data Fusion}
+\cite{Rossi_Performance} presented a data fusion algorithm for inertial navigation with focus on performance.
+It is based on the idea of data fusion which measures and combines values from several inertial sensors.
+
+\mnote{Acoustic GPS}
+\cite{Taraldsen_UnderwaterGPS} technology relies on acoustic waves as an analogy to the GPS radio waves.
+They discuss different approaches of Dilution Of Precision (DOP) which differ from the classical GPS setting.
+Using statistical methods, they estimate the accuracy of positioning and try to correct errors.
+
 
 \section{Underwater Navigation Systems}
 
@@ -82,10 +85,17 @@ IrukaTact by \cite{Chacin_Irukatact} is a a glove which uses water propulsion on
 The thermal stimulation, hot and cold, were used to increase the immersion and give directional cues.
 They found that cold stimuli were perceived significantly better in providing directional feedback.
 
-\cite{Wilson:2011:LHT:1978942.1979316} 
+\cite{Wilson:2011:LHT:1978942.1979316} discovered that cold stimuli are faster to detect and more comfortable for the user. 
+They tested different changes of temperature per second and higher rates are better detectable. 
+Also producing detectable cold stimuli are more power efficient than warm stimuli.
 
+\cite{Halvey:2012:BCO:2207676.2207779} investigated the environmental effects on thermal feedback recognition. 
+They conducted an outdoor study over several month and varying conditions and showed that ambient temperature has a significant effect on the detection and perception of thermal stimuli.
+Humidity on the other hand has a negligible effect in mobile interaction. 
+This result is supported by \cite{givoni}.
 
-
+\cite{hirosawa} looked into the effect of room and skin temperature on temperature sensitivity.
+Their results show that the threshold values change with the room temperature for both, warm and cold.
 
 
 
