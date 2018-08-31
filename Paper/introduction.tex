@@ -8,17 +8,64 @@
 \chapter{Introduction}
 \label{introduction}
 
-Navigation under water is a tricky and sometimes critical task when diving. 
-So far, characteristics of the diving spot such as current and landmarks available for orientation determine if is suitable for beginners or whether more experience is necessary. 
-For professional divers commercial navigation systems exist, which mostly consists of a (head-up) display giving precise information. 
-These systems allow divers to keep track of their orientation even under difficult conditions, but the technology necessary is complex and expensive, as the omnipresent GPS localization does not work below the water surface. 
-Systems as proposed by Taraldsen et al.~\cite{Taraldsen_UnderwaterGPS} use acoustic beacon systems, other systems use GPS for an initial calibration and rely on a inertial measurement unit (IMU) under water~\cite{Rossi_Performance}.
-For less safety critical situations, e.g., guiding swimmers snorkeling through a scenic reef, less detailed feedback is necessary, and thus, the presentation of the navigation information can be different. 
-In this paper, we investigate which modality is optimal to communicate such minimal cues for underwater navigation.
-The technology added to the snorkel gear should also be minimal to achieve high acceptance and low distraction, fulfilling the vision of non-visible ubiquitous computing~\cite{Weiser:1993:CSI:159544.159617}.
+Today navigation systems are a natural part of our everyday life.
+They are used in vehicles and every smart phone has GPS and map information as well.
+GPS uses 29 satellites in the atmosphere where at least four of them are in view from any spot on the earth at any time.
+The satellites are synchronized by control stations around the globe using atomic clocks.
+The receiver triangulates the position with the distance information of the satellites.
+Most of the time this navigation information is conveyed visually by a screen or auditory with precise instructions.
 
-We compared haptic, visual, and acoustic feedback which is well-researched for orientation cues above the surface. 
-We attached vibration motors, Peltier elements for thermal feedback, and LEDs to the snorkel mask, and had the participants of our study wear waterproof earphones (cf.\ Fig.~\ref{fig:figure1}). 
-We measured reaction times and asked for qualitative feedback.
-While light and vibration achieve similar reaction times, vibration was perceived as being more comfortable. 
-Thermal feedback performed poorly as it stayed unnoticed several times. 
+Underwater, navigation can be as crucial as it is outside the water.
+From novice snorkellers to experienced scuba (self-contained underwater breathing apparatus) divers navigation information can lead to a better experience or is essential for the job.
+Novice divers have no knowledge of the area and are not used to the orientation via certain landmarks.
+GPS underwater can help to navigate the user to points of interest, save locations to share them later, find back to the start, or view  the route later on the computer. 
+
+GPS underwater is a complex topic since the signals of GPS satellites do not propagate underwater.
+Current research investigates different approaches to provide GPS underwater not only for divers but submarines and autonomous underwater vehicles (AUV).
+A few systems are out there which already uses a floating GPS antenna wired to a screen held by the diver \citep{navdive}.
+Another system uses an initial GPS position before submerging and switches to inertial sensor measurements while submerged \citep{ariadna}.
+Using acoustic waves in analogy to the radio waves of the GPS satellites is locally used in WaterLinked \citep{waterlinked} and researched \citep{Taraldsen_UnderwaterGPS}.
+
+These systems, partly available commercially, focus on their realization of the GPS problem.
+All of them use waterproof encapsulated screens and controls which are held by the user all the time.
+On one hand screens are a rich solution and can provide detailed information not only for navigation.
+On the other hand it can be tedious to carry it all time, there are wires, and a high power consumption.
+Other solutions which focus more on the interaction part of underwater navigation systems propose augmented reality diving goggles \citep{scubus}.
+It is an all in one system which is most likely expensive and not suitable for everyone.
+
+Since underwater GPS is hard to deploy without a proper test environment we decide to focus on the interaction aspect.
+Following the concept of ubiquitous computing we aim to make the technology invisible to achieve high acceptance and less distraction \citep{Weiser:1993:CSI:159544.159617}.
+Therefore, we focus low level feedback which can give directional cues using electronics which are more affordable.
+
+In this thesis we present our prototype comprising an LED, a vibration motor, a Peltier cooling element, and waterproof headphones.
+We describe how it is built and what consideration it implies.
+Furthermore we conduct a user study with 11 participants testing the system underwater and one participant outside the water for comparison.
+We evaluate the time it takes the participants to perceive the feedback by the different modalities and ask for qualitative feedback by the users.
+
+The results show that light, vibration, and sound achieve rather similar reaction times.
+Thermal feedback performs poorly underwater and is not even recognized by all participants.
+Additionally, the power consumption of the Peltier element is not reasonable in mobile environments.
+Qualitative feedback supports the data of the study that vibration feedback is recommended to convey low level directional cues underwater since it unobtrusive, well recognizable, and comfortable.
+
+
+
+
+
+
+
+
+
+%Navigation under water is a tricky and sometimes critical task when diving. 
+%So far, characteristics of the diving spot such as current and landmarks available for orientation determine if is suitable for beginners or whether more experience is necessary. 
+%For professional divers commercial navigation systems exist, which mostly consists of a (head-up) display giving precise information. 
+%These systems allow divers to keep track of their orientation even under difficult conditions, but the technology necessary is complex and expensive, as the omnipresent GPS localization does not work below the water surface. 
+%Systems as proposed by Taraldsen et al.~\cite{Taraldsen_UnderwaterGPS} use acoustic beacon systems, other systems use GPS for an initial calibration and rely on a inertial measurement unit (IMU) under water~\cite{Rossi_Performance}.
+%For less safety critical situations, e.g., guiding swimmers snorkeling through a scenic reef, less detailed feedback is necessary, and thus, the presentation of the navigation information can be different. 
+%In this paper, we investigate which modality is optimal to communicate such minimal cues for underwater navigation.
+%The technology added to the snorkel gear should also be minimal to achieve high acceptance and low distraction, fulfilling the vision of non-visible ubiquitous computing~\cite{Weiser:1993:CSI:159544.159617}.
+%
+%We compared haptic, visual, and acoustic feedback which is well-researched for orientation cues above the surface. 
+%We attached vibration motors, Peltier elements for thermal feedback, and LEDs to the snorkel mask, and had the participants of our study wear waterproof earphones (cf.\ Fig.~\ref{fig:figure1}). 
+%We measured reaction times and asked for qualitative feedback.
+%While light and vibration achieve similar reaction times, vibration was perceived as being more comfortable. 
+%Thermal feedback performed poorly as it stayed unnoticed several times. 
