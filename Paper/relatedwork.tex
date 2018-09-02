@@ -8,14 +8,15 @@
 \chapter{Related work}
 \label{relatedwork}
 
-In this chapter we give an overview of related work and research in the the fields of under water navigation systems. 
+In this chapter we give an overview of related work and research in the the fields of underwater navigation systems. 
 It is divided into three parts.
 First we give an overview of currently used technology used for underwater position tracking and the issues in comparison with common GPS.
 Second it covers existing systems which incorporate position tracking and underwater feedback today and third research regarding several feedback modalities. 
 
+\mnote{Military grade underwater navigation}
 It is commonly known that radio signals do not propagate underwater.
-Currently state of the art solutions consists of large and expensive inertial measurement units. 
-Those are for example used in submarines and use the last known position in combination with military grade accelerometer and diving depth to interpolate the current location \citep{meyer}.
+Current state of the art solutions consists of large and expensive inertial measurement units. 
+Those are for example used in submarines and take the last known position in combination with military grade accelerometer and diving depth to interpolate the current location \citep{meyer}.
 
 \mnote{Inertial Data Fusion}
 \cite{Rossi_Performance} presented a data fusion algorithm for inertial navigation with focus on performance.
@@ -41,7 +42,7 @@ A desktop application lets the user inspect their diving path and add landmarks 
 \mnote{Ariadna Tech}
 \cite{ariadna} developed a system which uses an initial GPS location from the wrist unit before submerging and switches to  inertial sensors afterwards.
 The sensors track the divers real-time position, speed, heading, and distance information using a navigation transmitter worn on the leg.
-It calculates the information in real-time and sends it wireless to to the wrist unit which displays it on screen.
+It calculates the information in and sends it wirelessly to to the wrist unit which displays it on screen.
 
 \mnote{WaterLinked}
 \cite{waterlinked} uses four hydro acoustic receiver in the water connected to a base station with access to a GPS antenna. 
@@ -58,15 +59,15 @@ These acoustic pulses are received be the four hydrophones and analysed with tim
 \mnote{Scubus S}
 \cite{scubus} propose a system similar to featuring a head up display like Google Glass, a LED flash light, and a HD camera. 
 All electronics including the battery are integrated into the smart diving goggles.
-The crowd funding campaign failed in 2015.
+The image is projected into the eye of the user. 
 The system is shown in figure~\ref{fig:scubusS} 
 
 \section{Feedback modalities}
 
 \mnote{GentleGuide}
-\cite{bosman} built and tested a system using 2 wrist worn vibration devices.
+\cite{bosman} built and tested a system using two wrist worn vibration devices.
 Main findings were that vibration feedback on one wrist is confusing, vibrations are rather a beacon to follow than a correction of one's direction, and that direction is better encoded in the duration of the pulse than the intensity.
-Results are promising for non-disruptive, easy learnable, low level-navigation cues.
+Results are promising for non-disruptive, easy learnable, low level navigation cues.
 
 \mnote{MOVING}
 \cite{Kiss:2018:NSM:3173574.3174191} present MOtorbike VIbrational Navigation Guidance, a smart kidney belt for motor cyclists that provides feedback through 12 vibration motors.
@@ -78,23 +79,26 @@ The use 20 vibration motors in 3 concentric ellipses around the head to give 3D 
 Vibration performed well compared to direct visual guidance and significantly better than 3D auditory cues.
 
 \mnote{IrukaTact}
-IrukaTact by \cite{Chacin_Irukatact} is a a glove which uses water propulsion on the fingertips and a sonar to assist in the location of underwater objects. The sonar detects the topography of the ground and sends the information to the system which uses micro-pumps to convey these information via varying water jets on the fingertips.
+IrukaTact by \cite{Chacin_Irukatact} is a a glove which uses water propulsion on the fingertips and a sonar to assist in the location of objects underwater. The sonar detects the topography of the ground and sends the information to the system which uses micro-pumps to convey these information via varying water jets on the fingertips.
 
 \mnote{ThermoVR}
 \cite{Peiris_thermoVR} present ThermoVR, a VR headset with five thermal feedback modules. 
 The thermal stimulation, hot and cold, were used to increase the immersion and give directional cues.
 They found that cold stimuli were perceived significantly better in providing directional feedback.
 
+\mnote{Cold vs hot stimuli}
 \cite{Wilson:2011:LHT:1978942.1979316} discovered that cold stimuli are faster to detect and more comfortable for the user. 
 They tested different changes of temperature per second and higher rates are better detectable. 
 Also producing detectable cold stimuli are more power efficient than warm stimuli.
 
+\mnote{Effect of ambient temperature}
 \cite{Halvey:2012:BCO:2207676.2207779} investigated the environmental effects on thermal feedback recognition. 
-They conducted an outdoor study over several month and varying conditions and showed that ambient temperature has a significant effect on the detection and perception of thermal stimuli.
+They conducted an outdoor study over several month with varying conditions and showed that ambient temperature has a significant effect on the detection and perception of thermal stimuli.
 Humidity on the other hand has a negligible effect in mobile interaction. 
 This result is supported by \cite{givoni}.
 
-\cite{hirosawa} looked into the effect of room and skin temperature on temperature sensitivity.
+\mnote{Effect of room and skin temperature}
+\cite{hirosawa} looked into the effect of room and skin temperature on sensitivity.
 Their results show that the threshold values change with the room temperature for both, warm and cold.
 
 
