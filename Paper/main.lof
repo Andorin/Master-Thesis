@@ -1,7 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Scubus S smart diving goggles by Noah Smith.\relax }}{7}{figure.caption.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces LED insulated and attached between the silicone and frame of the diving goggles using hotglue. \relax }}{12}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Stretchable headband with hook and loop fastener sewn to it. Allows comfortable adjustment on different head froms and sizes.\relax }}{13}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces theromelectric cooler mounted to the headband to be placed directly on the users skin.\relax }}{14}{figure.caption.15}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Piece of the stretchband sewn to the headband as a bag for the vibration motor.\relax }}{15}{figure.caption.16}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Pieces of the stretchband sewn to the headband as wireway for better cable management.\relax }}{15}{figure.caption.17}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The botton and the 3D printed case. To be pressed by the user when he recognizes feedback.\relax }}{16}{figure.caption.18}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Waterproof join of wires from each actuator to the ribbon cable.\relax }}{17}{figure.caption.19}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces The Arduino controlling the relay and other components of the prototype via the ribbon cable. The batteries power the theromelectric cooler when the relay is set correspondingly.\relax }}{18}{figure.caption.20}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Headband, diving goggles, and waterproof headphones with the integrated LED, Vibration motor, and Thermoelectric cooling module.\relax }}{19}{figure.caption.21}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A participant during the study in a local swimming hall.\relax }}{24}{figure.caption.26}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results of the reaction time on different feedback types under water. Means and 95\% confidence intervals.\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Means and standard deviations (less is better) of the results from the questionnaire.\relax }}{26}{figure.caption.28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rating of the feedback modalities by the users (less is better). Means and 95\% confidence intervals of the results from the questionnaire.\relax }}{26}{figure.caption.29}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Results of the reaction time on different feedback types ashore. Means and 95\% confidence intervals. \relax }}{29}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

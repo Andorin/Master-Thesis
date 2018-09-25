@@ -1,0 +1,155 @@
+\begin{thebibliography}{19}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ariadna~Tech(2016)]{ariadna}
+Inc. Ariadna~Tech.
+\newblock Ariadna - empowering divers with underwater navigation, 2016.
+\newblock \url{ https://www.ariadna.tech/}.
+
+\bibitem[Bosman et~al.(2003)Bosman, Groenendaal, Findlater, Visser, de~Graaf,
+  and Markopoulos]{bosman}
+S.~Bosman, B.~Groenendaal, J.~W. Findlater, T.~Visser, M.~de~Graaf, and
+  P.~Markopoulos.
+\newblock Gentleguide: An exploration of haptic output for indoors pedestrian
+  guidance.
+\newblock In \emph{MobileHCI~'03}, 2003.
+\newblock ISBN 978-3-540-45233-1.
+\newblock \doi{10.1007/978-3-540-45233-1_28}.
+
+\bibitem[Chacin and Oozu(2016)]{Chacin_Irukatact}
+A.~C. Chacin and T.~Oozu.
+\newblock Irukatact.
+\newblock \emph{interactions}, 23\penalty0 (6), 2016.
+\newblock ISSN 1072-5520.
+\newblock \doi{10.1145/2991899}.
+\newblock URL \url{http://doi.acm.org/10.1145/2991899}.
+
+\bibitem[Givoni et~al.(2006)Givoni, Khedari, Wong, Feriadi, and
+  Noguchi]{givoni}
+B.~Givoni, J.~Khedari, N.H. Wong, H.~Feriadi, and M.~Noguchi.
+\newblock Thermal sensation responses in hot, humid climates: effects of
+  humidity.
+\newblock \emph{Building Research \& Information}, 34\penalty0 (5), 2006.
+\newblock \doi{10.1080/09613210600861269}.
+
+\bibitem[Halvey et~al.(2012{\natexlab{a}})Halvey, Wilson, Brewster, and
+  Hughes]{Halvey_thermalFeedback}
+M.~Halvey, G.~Wilson, S.~Brewster, and S.~Hughes.
+\newblock "baby it's cold outside": The influence of ambient temperature and
+  humidity on thermal feedback.
+\newblock In \emph{CHI~'12}. ACM, 2012{\natexlab{a}}.
+\newblock ISBN 978-1-4503-1015-4.
+\newblock \doi{10.1145/2207676.2207779}.
+
+\bibitem[Halvey et~al.(2012{\natexlab{b}})Halvey, Wilson, Brewster, and
+  Hughes]{Halvey:2012:BCO:2207676.2207779}
+Martin Halvey, Graham Wilson, Stephen Brewster, and Stephen Hughes.
+\newblock "baby it's cold outside": The influence of ambient temperature and
+  humidity on thermal feedback.
+\newblock In \emph{Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '12, pages 715--724, New York, NY, USA,
+  2012{\natexlab{b}}. ACM.
+\newblock ISBN 978-1-4503-1015-4.
+\newblock \doi{10.1145/2207676.2207779}.
+\newblock URL \url{http://doi.acm.org/10.1145/2207676.2207779}.
+
+\bibitem[Hirosawa et~al.(1984)Hirosawa, Dodo, Hosokawa, Watanabe, Nishiyama,
+  and Fukuchi]{hirosawa}
+I.~Hirosawa, H.~Dodo, M.~Hosokawa, S.. Watanabe, K.~Nishiyama, and Y.~Fukuchi.
+\newblock Physiological variations of warm and cool sense with shift of
+  environmental.
+\newblock \emph{International Journal of Neuroscience}, 24\penalty0 (3-4),
+  1984.
+\newblock \doi{10.3109/00207458409089817}.
+
+\bibitem[Kaul and Rohs(2016)]{Kaul_HapticHead}
+O.~Kaul and M.~Rohs.
+\newblock Haptichead: 3d guidance and target acquisition through a vibrotactile
+  grid.
+\newblock In \emph{CHI~EA~'16}. ACM, 2016.
+\newblock ISBN 978-1-4503-4082-3.
+\newblock \doi{10.1145/2851581.2892355}.
+
+\bibitem[Kiss et~al.(2018)Kiss, Boldt, Pfleging, and
+  Schneegass]{Kiss:2018:NSM:3173574.3174191}
+F.~Kiss, R.~Boldt, B.~Pfleging, and S.~Schneegass.
+\newblock Navigation systems for motorcyclists: Exploring wearable tactile
+  feedback for route guidance in the real world.
+\newblock In \emph{CHI~'18}. ACM, 2018.
+\newblock ISBN 978-1-4503-5620-6.
+\newblock \doi{10.1145/3173574.3174191}.
+
+\bibitem[Meyer(2016)]{meyer}
+Robinson Meyer.
+\newblock Gps doesn't work underwater, 2016.
+\newblock \url{
+  https://www.theatlantic.com/technology/archive/2016/06/its-gps-underwater-for-robots/486656/}.
+
+\bibitem[N.~Smith(2015)]{scubus}
+A.~L. N.~Smith, B.~Andrick.
+\newblock Scubus s - gps-based underwater navigation technology, 2015.
+\newblock
+  \url{https://snorkelaroundtheworld.com/2015/05/smart-scuba-diving-mask/}.
+
+\bibitem[Nehowig(2014)]{navdive}
+Kelly Nehowig.
+\newblock Navdive -- gps-based navigation for scuba divers, 2014.
+\newblock \url{
+  https://www.kickstarter.com/projects/1889195857/navdive-gps-based-navigation-for-scuba-divers/?ref=kicktraq}.
+
+\bibitem[Peiris et~al.(2017)Peiris, Peng, Chen, Chan, and
+  Minamizawa]{Peiris_thermoVR}
+R.~L. Peiris, W.~Peng, Z.~Chen, L.~Chan, and K.~Minamizawa.
+\newblock Thermovr: Exploring integrated thermal haptic feedback with head
+  mounted displays.
+\newblock In \emph{CHI~'17}. ACM, 2017.
+\newblock ISBN 978-1-4503-4655-9.
+\newblock \doi{10.1145/3025453.3025824}.
+\newblock URL \url{http://doi.acm.org/10.1145/3025453.3025824}.
+
+\bibitem[Rossi et~al.(2014)Rossi, Pasquali, and Pastore]{Rossi_Performance}
+A.~Rossi, M.~Pasquali, and M.~Pastore.
+\newblock Performance analysis of an inertial navigation algorithm with dvl
+  auto-calibration for underwater vehicle.
+\newblock In \emph{DGON Inertial Sensors and Systems (ISS)}, 2014.
+\newblock \doi{10.1109/InertialSensors.2014.7049481}.
+
+\bibitem[Shb~Instruments(2009)]{navimate}
+Inc. Shb~Instruments.
+\newblock Navimate - gps for divers, 2009.
+\newblock \url{ https://www.navimate.com/}.
+
+\bibitem[Taraldsen et~al.(2011)Taraldsen, Reinen, and
+  Berg]{Taraldsen_UnderwaterGPS}
+G.~Taraldsen, T.~A. Reinen, and T.~Berg.
+\newblock The underwater gps problem.
+\newblock In \emph{OCEANS~2011}, 2011.
+\newblock \doi{10.1109/Oceans-Spain.2011.6003649}.
+
+\bibitem[WaterLinked(2018)]{waterlinked}
+WaterLinked.
+\newblock Underwater gps explorer kit, 2018.
+\newblock \url{ https://waterlinked.com/products/}.
+
+\bibitem[Weiser(1993)]{Weiser:1993:CSI:159544.159617}
+M.~Weiser.
+\newblock Some computer science issues in ubiquitous computing.
+\newblock \emph{Commun. ACM}, 36\penalty0 (7):\penalty0 75--84, July 1993.
+\newblock ISSN 0001-0782.
+\newblock \doi{10.1145/159544.159617}.
+\newblock URL \url{http://doi.acm.org/10.1145/159544.159617}.
+
+\bibitem[Wilson et~al.(2011)Wilson, Halvey, Brewster, and
+  Hughes]{Wilson:2011:LHT:1978942.1979316}
+G.~Wilson, M.~Halvey, S.~A. Brewster, and S.~A. Hughes.
+\newblock Some like it hot: Thermal feedback for mobile devices.
+\newblock In \emph{CHI~'11}, 2011.
+\newblock ISBN 978-1-4503-0228-9.
+\newblock \doi{10.1145/1978942.1979316}.
+\newblock URL \url{http://doi.acm.org/10.1145/1978942.1979316}.
+
+\end{thebibliography}
